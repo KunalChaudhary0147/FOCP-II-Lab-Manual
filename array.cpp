@@ -1,4 +1,4 @@
-/*read an array of marks of students and make a function result which displays max, min, avg. dont use built in max min avg function*/
+/*read an array of marks of students and make a function result which displays max, min, avg*/
 
 #include<iostream>
 #include<numeric>
