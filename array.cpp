@@ -1,19 +1,24 @@
-/*read an array of marks of students and make a function result which displays max, min, avg. use built in max min avg function*/
+/*read an array of marks of students and make a function result which displays max, min, avg. dont use built in max min avg function*/
 
 #include<iostream>
-#include<algorithm>
 #include<numeric>
 using namespace std;
 
 void result(int *marks, int n)
 {
-    int maxMarks = *max_element(marks, marks + n);
-    int minMarks = *min_element(marks, marks + n);
-    double avgMarks = accumulate(marks, marks + n, 0.0) / n;
-
-    cout<<"Maximum Marks: "<<maxMarks<<endl;
-    cout<<"Minimum Marks: "<<minMarks<<endl;
-    cout<<"Average Marks: "<<avgMarks<<endl;
+    int max = marks[0];
+    int min = marks[0];
+    for(int i = 1; i < n; i++)
+    {
+        if(marks[i] > max)
+            max = marks[i];
+        if(marks[i] < min)
+            min = marks[i];
+    }
+    float avg = accumulate(marks, marks + n, 0) / (float)n;
+    cout<<"Max marks: "<<max<<endl;
+    cout<<"Min marks: "<<min<<endl;
+    cout<<"Average marks: "<<avg<<endl;
 }
 
 int main()
