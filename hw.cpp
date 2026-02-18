@@ -16,7 +16,7 @@ void computePerformance(int *marks, int n)
         if(marks[i] < min)
             min = marks[i];
     }
-    float avg = accumulate(marks, marks + n, 0.0) / (float)n;
+    float avg = accumulate(marks, marks + n, 0.0) / n;
     cout<<"Max marks: "<<max<<endl;
     cout<<"Min marks: "<<min<<endl;
     cout<<"Average marks: "<<avg<<endl;
