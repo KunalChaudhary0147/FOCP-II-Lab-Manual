@@ -69,10 +69,11 @@ int main()
     s.dimension();
 
     cout << endl << "Square: " << endl;
-    sq.display();   //inherited function, not overridden
-    sq.area();      //overridden function
-    sq.perimeter(); //overridden function
-    sq.dimension(); //overridden function
+    sq.display();          //inherited function, not overridden
+    sq.shape::area();      //calling base class function using scope resolution operator
+    sq.area();            //overridden function
+    sq.perimeter();       //overridden function
+    sq.dimension();       //overridden function
 
     return 0;
 }
